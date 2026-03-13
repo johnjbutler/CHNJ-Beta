@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Clean House NJ — Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #f8f9fb;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #192255;
+      }
+
+      .container {
+        text-align: center;
+        padding: 2rem;
+        max-width: 480px;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-bottom: 2.5rem;
+        letter-spacing: -0.5px;
+      }
+
+      .logo span { color: #1b3996; }
+
+      .icon {
+        width: 80px;
+        height: 80px;
+        background: #eef3ff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+      }
+
+      .icon svg {
+        width: 36px;
+        height: 36px;
+        color: #1b3996;
+      }
+
+      .eyebrow {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #c0392b;
+        margin-bottom: 0.6rem;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+        font-weight: 900;
+        margin-bottom: 0.75rem;
+        line-height: 1.2;
+      }
+
+      .tagline {
+        font-size: 1rem;
+        color: #192255bb;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+      }
+
+      .sub {
+        font-size: 0.85rem;
+        color: #192255aa;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+
+      .bar {
+        width: 100%;
+        height: 6px;
+        background: #e5e9f0;
+        border-radius: 99px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+      }
+
+      .bar-fill {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, #1b3996, #3b96e7);
+        border-radius: 99px;
+        animation: fill 3s ease-in-out forwards;
+      }
+
+      @keyframes fill {
+        0%   { width: 0%; }
+        100% { width: 100%; }
+      }
+
+      .redirect-note {
+        font-size: 0.8rem;
+        color: #192255aa;
+        margin-bottom: 2rem;
+      }
+
+      .btn {
+        display: inline-block;
+        background: #c0392b;
+        color: white;
+        padding: 0.85rem 2rem;
+        border-radius: 99px;
+        font-weight: 800;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+
+      .btn:hover { background: #a93226; }
+
+      .stripe {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #1b3996, #ffffff, #c0392b);
+      }
+    </style>
+    <script>
+      sessionStorage.redirect = location.pathname;
+      setTimeout(() => location.replace('/CHNJ-Beta/'), 3000);
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">Clean<span>House</span>NJ</div>
+
+      <div class="icon">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M5 10v9a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1v-9" />
+        </svg>
+      </div>
+
+      <p class="eyebrow">404 — Uh oh</p>
+      <h1>Looks like this page<br>needs a deep clean.</h1>
+      <p class="tagline">We couldn't find what you were looking for —<br>but we <em>are</em> very good at making messes disappear.</p>
+      <p class="sub">Taking you back home now.</p>
+
+      <div class="bar"><div class="bar-fill"></div></div>
+      <p class="redirect-note">Redirecting in 3 seconds</p>
+
+      <a href="/CHNJ-Beta/" class="btn">Take Me Home Now</a>
+    </div>
+
+    <div class="stripe"></div>
+  </body>
+</html>
